@@ -35,8 +35,8 @@ Orion:Notify({
 Tab:AddButton({
 	Name = "Button!",
 	Callback = function()
-      print("button pressed")
-	end    
+      		print("button pressed")
+  	end    
 })
 ```
 
