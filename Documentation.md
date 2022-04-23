@@ -1,7 +1,7 @@
 # Orion Library
 This documentation is for the stable release of Orion Library.
 
-## Starting the Library
+## Booting the Library
 ```lua
 local Orion = loadstring(game:HttpGet(('str')))()
 ```
@@ -39,7 +39,7 @@ Tab:AddButton({
 })
 ```
 
-## Creating a Checkbox (toggle)
+## Creating a Checkbox toggle
 ```lua
 Tab:AddToggle({
 	Name = "This is a toggle!",
@@ -86,7 +86,7 @@ Tab:AddLabel("Label")
 Tab:AddParagraph("Paragraph","Paragraph Content")
 ```
 
-## Creating an Adaptive Input (TextBox)
+## Creating an Adaptive Input
 ```lua
 Tab:AddTextbox({
 	Name = "Textbox",
