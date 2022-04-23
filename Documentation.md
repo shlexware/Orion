@@ -76,6 +76,10 @@ Tab:AddSlider({
 	end    
 })
 ```
+### Change Slider Value
+```lua
+Slider:Set(2)
+```
 
 ## Creating a Label
 ```lua
