@@ -113,6 +113,10 @@ Tab:AddBind({
 	end    
 })
 ```
+### Selecting a bind
+```lua
+Bind:Set("E")
+```
 
 ## Creating a Dropdown menu
 ```lua
