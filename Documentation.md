@@ -3,7 +3,7 @@ This documentation is for the stable release of Orion Library.
 
 ## Booting the Library
 ```lua
-local Orion = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/orion/main/source')))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/orion/main/source')))()
 ```
 
 ## Creating a Window
@@ -23,7 +23,7 @@ local Tab = Window:MakeTab({
 
 ## Notifying the user
 ```lua
-Orion:Notify({
+OrionLib:Notify({
 	Name = "Title!",
 	Content = "Notification content... what will it say??",
 	Time = 5
@@ -124,5 +124,5 @@ Tab:AddDropdown({
 
 ## Destroying the Interface
 ```lua
-Orion:Destroy()
+OrionLib:Destroy()
 ```
