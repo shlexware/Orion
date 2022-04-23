@@ -125,6 +125,10 @@ Tab:AddDropdown({
 	end    
 })
 ```
+### Adding a set of new Dropdown buttons to an existing menu
+```lua
+Dropdown:Refresh(List<table>)
+```
 
 ## Destroying the Interface
 ```lua
