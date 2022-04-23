@@ -135,8 +135,9 @@ Tab:AddDropdown({
 ```
 ### Adding a set of new Dropdown buttons to an existing menu
 ```lua
-Dropdown:Refresh(List<table>)
+Dropdown:Refresh(List<table>,true)
 ```
+The above boolean value "true" is whether or not the current buttons will be deleted.
 ### Selecting a dropdown option
 ```lua
 Dropdown:Set("dropdown option")
