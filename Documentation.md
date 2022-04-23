@@ -23,7 +23,7 @@ local Tab = Window:MakeTab({
 
 ## Notifying the user
 ```lua
-OrionLib:Notify({
+OrionLib:MakeNotification({
 	Name = "Title!",
 	Content = "Notification content... what will it say??",
 	Time = 5
