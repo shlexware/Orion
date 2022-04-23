@@ -115,7 +115,7 @@ Tab:AddBind({
 ```
 ### Selecting a bind
 ```lua
-Bind:Set("E")
+Bind:Set(Enum.KeyCode.E)
 ```
 
 ## Creating a Dropdown menu
