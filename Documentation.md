@@ -129,6 +129,10 @@ Tab:AddDropdown({
 ```lua
 Dropdown:Refresh(List<table>)
 ```
+### Selecting a dropdown option
+```lua
+Dropdown:Set("dropdown option")
+```
 
 ## Destroying the Interface
 ```lua
