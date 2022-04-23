@@ -61,6 +61,10 @@ Tab:AddColorpicker({
 	end	  
 })
 ```
+### Setting the color picker's value
+```lua
+ColorPicker:Set(Color3.fromRGB(255,255,255))
+```
 
 ## Creating a Slider
 ```lua
