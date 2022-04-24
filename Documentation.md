@@ -93,12 +93,16 @@ Tab:AddLabel("Label")
 ```
 ## Changing an existing label
 ```lua
-CoolLabel:Change("Label New!")
+CoolLabel:Set("Label New!")
 ```
 
 ## Creating a Paragraph
 ```lua
 Tab:AddParagraph("Paragraph","Paragraph Content")
+```
+## Changing an existing paragraph
+```lua
+CoolParagraph:Set("Paragraph New!")
 ```
 
 ## Creating an Adaptive Input
