@@ -36,7 +36,7 @@ OrionLib:MakeNotification({
 Tab:AddButton({
 	Name = "Button!",
 	Callback = function()
-      		print("button pressed")
+      	print("button pressed")
   	end    
 })
 ```
@@ -85,6 +85,7 @@ Tab:AddSlider({
 ```lua
 Slider:Set(2)
 ```
+Make sure you make your slider a variable (local CoolSlider = Tab:AddSlider...) for this to work.
 
 ## Creating a Label
 ```lua
