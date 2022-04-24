@@ -6,10 +6,14 @@ This documentation is for the stable release of Orion Library.
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 ```
 
+
+
 ## Creating a Window
 ```lua
 local Window = OrionLib:MakeWindow({Name = "Title of the library"})
 ```
+
+
 
 ## Creating a Tab
 ```lua
@@ -19,6 +23,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 ```
+
 
 
 ## Notifying the user
@@ -31,6 +36,8 @@ OrionLib:MakeNotification({
 })
 ```
 
+
+
 ## Creating a Button
 ```lua
 Tab:AddButton({
@@ -40,6 +47,7 @@ Tab:AddButton({
   	end    
 })
 ```
+
 
 ## Creating a Checkbox toggle
 ```lua
@@ -52,6 +60,7 @@ Tab:AddToggle({
 })
 ```
 
+
 ## Creating a Color Picker
 ```lua
 Tab:AddColorpicker({
@@ -62,10 +71,12 @@ Tab:AddColorpicker({
 	end	  
 })
 ```
+
 ### Setting the color picker's value
 ```lua
 ColorPicker:Set(Color3.fromRGB(255,255,255))
 ```
+
 
 ## Creating a Slider
 ```lua
@@ -81,29 +92,35 @@ Tab:AddSlider({
 	end    
 })
 ```
+
 ### Change Slider Value
 ```lua
 Slider:Set(2)
 ```
 Make sure you make your slider a variable (local CoolSlider = Tab:AddSlider...) for this to work.
 
+
 ## Creating a Label
 ```lua
 Tab:AddLabel("Label")
 ```
+
 ### Changing an existing label
 ```lua
 CoolLabel:Set("Label New!")
 ```
 
+
 ## Creating a Paragraph
 ```lua
 Tab:AddParagraph("Paragraph","Paragraph Content")
 ```
+
 ### Changing an existing paragraph
 ```lua
 CoolParagraph:Set("Paragraph New!")
 ```
+
 
 ## Creating an Adaptive Input
 ```lua
@@ -117,6 +134,7 @@ Tab:AddTextbox({
 })
 ```
 
+
 ## Creating a Keybind
 ```lua
 Tab:AddBind({
@@ -127,10 +145,12 @@ Tab:AddBind({
 	end    
 })
 ```
+
 ### Selecting a bind
 ```lua
 Bind:Set(Enum.KeyCode.E)
 ```
+
 
 ## Creating a Dropdown menu
 ```lua
@@ -143,15 +163,19 @@ Tab:AddDropdown({
 	end    
 })
 ```
+
 ### Adding a set of new Dropdown buttons to an existing menu
 ```lua
 Dropdown:Refresh(List<table>,true)
 ```
+
 The above boolean value "true" is whether or not the current buttons will be deleted.
 ### Selecting a dropdown option
 ```lua
 Dropdown:Set("dropdown option")
 ```
+
+
 
 ## Destroying the Interface
 ```lua
