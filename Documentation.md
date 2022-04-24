@@ -91,6 +91,10 @@ Make sure you make your slider a variable (local CoolSlider = Tab:AddSlider...) 
 ```lua
 Tab:AddLabel("Label")
 ```
+## Changing an existing label
+```lua
+CoolLabel:Change("Label New!")
+```
 
 ## Creating a Paragraph
 ```lua
