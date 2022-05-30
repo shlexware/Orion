@@ -91,6 +91,12 @@ Callback = <function> - The function of the toggle.
 ]]
 ```
 
+### Changing the value of an existing Toggle
+```lua
+CoolToggle:Set(true)
+```
+
+
 
 ## Creating a Color Picker
 ```lua
