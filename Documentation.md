@@ -13,10 +13,10 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 --[[
-Name = <string> - The name of the UI.
-HidePremium = <bool> - Whether or not the user details shows Premium status or not.
-SaveConfig = <bool> - Toggles the config saving in the UI.
-ConfigFolder = <string> - The name of the folder where the configs are saved.
+<Name: string>: The name of the UI.
+<HidePremium: boolean>: Whether or not the user details shows Premium status or not.
+<SaveConfig: boolean>: Toggles the config saving in the UI.
+<ConfigFolder: string>: The name of the folder where the configs are saved.
 ]]
 ```
 
@@ -31,9 +31,9 @@ local Tab = Window:MakeTab({
 })
 
 --[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+<Name: string>: The name of the tab.
+<Icon: string>: The icon of the tab.
+<PremiumOnly: boolean>: Makes the tab accessible to Sirus Premium users only.
 ]]
 ```
 
@@ -49,10 +49,10 @@ OrionLib:MakeNotification({
 })
 
 --[[
-Title = <string> - The title of the notification.
-Content = <string> - The content of the notification.
-Image = <string> - The icon of the notification.
-Time = <number> - The duration of the notfication.
+<Title: string>: The title of the notification.
+<Content: string>: The content of the notification.
+<Image: string>: The icon of the notification.
+<Time: number>: The duration of the notfication.
 ]]
 ```
 
@@ -68,8 +68,8 @@ Tab:AddButton({
 })
 
 --[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
+<Name: string>: The name of the button.
+<Callback: function>: The function of the button.
 ]]
 ```
 
@@ -85,9 +85,9 @@ Tab:AddToggle({
 })
 
 --[[
-Name = <string> - The name of the toggle.
-Default = <bool> - The default value of the toggle.
-Callback = <function> - The function of the toggle.
+<Name: string>: The name of the toggle.
+<Default: boolean>: The default value of the toggle.
+<Callback: function>: The function of the toggle.
 ]]
 ```
 
@@ -109,9 +109,9 @@ Tab:AddColorpicker({
 })
 
 --[[
-Name = <string> - The name of the colorpicker.
-Default = <color3> - The default value of the colorpicker.
-Callback = <function> - The function of the colorpicker.
+<Name: string>: The name of the colorpicker.
+<Default: color3>: The default value of the colorpicker.
+<Callback: function>: The function of the colorpicker.
 ]]
 ```
 
@@ -137,13 +137,13 @@ Tab:AddSlider({
 })
 
 --[[
-Name = <string> - The name of the slider.
-Min = <number> - The minimal value of the slider.
-Max = <number> - The maxium value of the slider.
-Increment = <number> - How much the slider will change value when dragging.
-Default = <number> - The default value of the slider.
-ValueName = <string> - The text after the value number.
-Callback = <function> - The function of the slider.
+<Name: string>: The name of the slider.
+<Min: number>: The minimal value of the slider.
+<Max: number>: The maxium value of the slider.
+<Increment: number>: How much the slider will change value when dragging.
+<Default: number>: The default value of the slider.
+<ValueName: string>: The text after the value number.
+<Callback: function>: The function of the slider.
 ]]
 ```
 
@@ -188,10 +188,10 @@ Tab:AddTextbox({
 })
 
 --[[
-Name = <string> - The name of the textbox.
-Default = <string> - The default value of the textbox.
-TextDisappear = <bool> - Makes the text disappear in the textbox after losing focus.
-Callback = <function> - The function of the textbox.
+<Name: string>: The name of the textbox.
+<Default: string>: The default value of the textbox.
+<TextDisappear: boolean>: Makes the text disappear in the textbox after losing focus.
+<Callback: function>: The function of the textbox.
 ]]
 ```
 
@@ -208,10 +208,10 @@ Tab:AddBind({
 })
 
 --[[
-Name = <string> - The name of the bind.
-Default = <keycode> - The default value of the bind.
-Hold = <bool> - Makes the bind work like: Holding the key > The bind returns true, Not holding the key > Bind returns false.
-Callback = <function> - The function of the bind.
+<Name: string>: The name of the bind.
+<Default: Enum.KeyCode>: The default value of the bind.
+<Hold: boolean>: Makes the bind work like: Holding the key > The bind returns true, Not holding the key > Bind returns false.
+<Callback: function>: The function of the bind.
 ]]
 ```
 
@@ -233,10 +233,10 @@ Tab:AddDropdown({
 })
 
 --[[
-Name = <string> - The name of the dropdown.
-Default = <string> - The default value of the dropdown.
-Options = <table> - The options in the dropdown.
-Callback = <function> - The function of the dropdown.
+<Name: string>: The name of the dropdown.
+<Default: string>: The default value of the dropdown.
+<Options: table>: The options in the dropdown.
+<Callback: function>: The function of the dropdown.
 ]]
 ```
 
@@ -275,8 +275,8 @@ Flags only work with the toggle, slider, dropdown, bind, and colorpicker.
 ### Making your interface work with configs.
 In order to make your interface use the configs function you first need to add the `SaveConfig` and `ConfigFolder` arguments to your window function. The explanation of these arguments in above.
 Then you need to add the `Flag` and `Save` values to every toggle, slider, dropdown, bind, and colorpicker you want to include in the config file.
-The `Flag = <string>` argument is the ID of an element in the config file.
-The `Save = <bool>` argument includes the element in the config file.
+The `<Flag: string>` argument is the ID of an element in the config file.
+The `<Save: bool>` argument includes the element in the config file.
 Config files are made for every game the library is launched in.
 
 ## Destroying the Interface
