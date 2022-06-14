@@ -186,7 +186,7 @@ Tab:AddParagraph("Paragraph","Paragraph Content")
 
 ### Changing an existing paragraph
 ```lua
-CoolParagraph:Set("Paragraph New!")
+CoolParagraph:Set("Paragraph New!", "New Paragraph Content!")
 ```
 
 
