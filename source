@@ -580,7 +580,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				Font = Enum.Font.GothamBold,
 				ClipsDescendants = true
 			}), "Text"),
-			AddThemeObject(SetProps(MakeElement("Label", IsPremium() and "Premium" or "Standard", 12), {
+			AddThemeObject(SetProps(MakeElement("Label", "", 12), {
 				Size = UDim2.new(1, -60, 0, 12),
 				Position = UDim2.new(0, 50, 1, -25),
 				Visible = not WindowConfig.HidePremium
@@ -1671,7 +1671,7 @@ function OrionLib:MakeWindow(WindowConfig)
 			ElementFunction[i] = v 
 		end
 
-		if TabConfig.PremiumOnly and IsPremium() == false then
+		if TabConfig.PremiumOnly then
 			for i, v in next, ElementFunction do
 				ElementFunction[i] = function() end
 			end    
