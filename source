@@ -27,28 +27,6 @@ local OrionLib = {
 	SaveCfg = false
 }
 
-local function IsPremium()
-	--local CheckedHWID = getHwid()
-	--if CheckedHWID == nil or CheckedHWID == "Error" then
-	--	return
-	--end
-	--local presult = tostring(game:HttpGet("https://gsapi.xyz/domain/checkPremium.php?hwid=".. CheckedHWID));
-	--local egg = dec(presult):split(':')
-
-	--if (os.time() - tonumber(egg[1])) > 2 then
-	--	return false
-	--end
-	--if dec(egg[2]) == "true" then
-	--	return true
-	--end
-	--return false
-	if LTH_IsUserPremium == nil then
-		return true
-	else
-		return LTH_IsUserPremium
-	end
-end   
-
 --Feather Icons https://github.com/evoincorp/lucideblox/tree/master/src/modules/util - Created by 7kayoh
 local Icons = {}
 
