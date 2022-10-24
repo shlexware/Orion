@@ -1730,7 +1730,7 @@ function OrionLib:MakeWindow(WindowConfig)
 			end
 			OrionLib:MakeNotification({
 				Name = "UI Library Available",
-				Content = "New UI Library Beta Available - Joining Discord",
+				Content = "New UI Library Available - Joining Discord (#announcements)",
 				Time = 8
 			})
 			writefile("NewLibraryNotification.txt","The value for the notification having been sent to you.")
