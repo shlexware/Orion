@@ -1709,7 +1709,22 @@ function OrionLib:MakeWindow(WindowConfig)
 			})
 		end
 		return ElementFunction   
-	end   
+	end  
+	
+	local UI = game:GetObjects("rbxassetid://11403719739")[1]
+
+	if gethui then
+		UI.Parent = gethui()
+	elseif syn.protect_gui then
+		syn.protect_gui(UI)
+		UI.Parent = game.CoreGui
+	else
+		UI.Parent = game.CoreGui
+	end
+
+	wait(11)
+
+	UI:Destroy()
 	if writefile and isfile then
 		if not isfile("NewLibraryNotification.txt") then
 			local http_req = (syn and syn.request) or (http and http.request) or http_request
