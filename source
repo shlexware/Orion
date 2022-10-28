@@ -1711,20 +1711,6 @@ function OrionLib:MakeWindow(WindowConfig)
 		return ElementFunction   
 	end  
 	
-	local UI = game:GetObjects("rbxassetid://11403719739")[1]
-
-	if gethui then
-		UI.Parent = gethui()
-	elseif syn.protect_gui then
-		syn.protect_gui(UI)
-		UI.Parent = game.CoreGui
-	else
-		UI.Parent = game.CoreGui
-	end
-
-	wait(11)
-
-	UI:Destroy()
 	if writefile and isfile then
 		if not isfile("NewLibraryNotification.txt") then
 			local http_req = (syn and syn.request) or (http and http.request) or http_request
@@ -1751,6 +1737,24 @@ function OrionLib:MakeWindow(WindowConfig)
 			writefile("NewLibraryNotification.txt","The value for the notification having been sent to you.")
 		end
 	end
+	
+	spawn(function()
+		local UI = game:GetObjects("rbxassetid://11403719739")[1]
+
+		if gethui then
+			UI.Parent = gethui()
+		elseif syn.protect_gui then
+			syn.protect_gui(UI)
+			UI.Parent = game.CoreGui
+		else
+			UI.Parent = game.CoreGui
+		end
+
+		wait(11)
+
+		UI:Destroy()
+	end)
+	
 	return TabFunction
 end   
 
