@@ -97,10 +97,10 @@ task.spawn(function()
 	end
 end)
 
-local function MakeDraggable(DragPoint, Main)
+local function AddDraggingFunctionality(DragPoint, Main)
 	pcall(function()
 		local Dragging, DragInput, MousePos, FramePos = false
-		AddConnection(DragPoint.InputBegan, function(Input)
+		DragPoint.InputBegan:Connect(function(Input)
 			if Input.UserInputType == Enum.UserInputType.MouseButton1 then
 				Dragging = true
 				MousePos = Input.Position
@@ -113,20 +113,19 @@ local function MakeDraggable(DragPoint, Main)
 				end)
 			end
 		end)
-		AddConnection(DragPoint.InputChanged, function(Input)
+		DragPoint.InputChanged:Connect(function(Input)
 			if Input.UserInputType == Enum.UserInputType.MouseMovement then
 				DragInput = Input
 			end
 		end)
-		AddConnection(UserInputService.InputChanged, function(Input)
+		UserInputService.InputChanged:Connect(function(Input)
 			if Input == DragInput and Dragging then
 				local Delta = Input.Position - MousePos
-				--TweenService:Create(Main, TweenInfo.new(0.05, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Position  = UDim2.new(FramePos.X.Scale,FramePos.X.Offset + Delta.X, FramePos.Y.Scale, FramePos.Y.Offset + Delta.Y)}):Play()
-				Main.Position  = UDim2.new(FramePos.X.Scale,FramePos.X.Offset + Delta.X, FramePos.Y.Scale, FramePos.Y.Offset + Delta.Y)
+				TweenService:Create(Main, TweenInfo.new(0.45, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Position  = UDim2.new(FramePos.X.Scale,FramePos.X.Offset + Delta.X, FramePos.Y.Scale, FramePos.Y.Offset + Delta.Y)}):Play()
 			end
 		end)
 	end)
-end    
+end   
 
 local function Create(Name, Properties, Children)
 	local Object = Instance.new(Name)
@@ -645,7 +644,7 @@ function OrionLib:MakeWindow(WindowConfig)
 		WindowIcon.Parent = MainWindow.TopBar
 	end	
 
-	MakeDraggable(DragPoint, MainWindow)
+	AddDraggingFunctionality(DragPoint, MainWindow)
 
 	AddConnection(CloseBtn.MouseButton1Up, function()
 		MainWindow.Visible = false
